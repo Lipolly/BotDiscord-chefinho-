@@ -1,0 +1,48 @@
+{
+  "name": "music-bot-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zealcordNation/music-bot-example.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "DiscordJS",
+    "NodeJS",
+    "Discord",
+    "Zealcord"
+  ],
+  "author": "Lipolly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zealcordNation/music-bot-example/issues"
+  },
+  "homepage": "https://github.com/zealcordNation/music-bot-example#readme",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "@hakuneko/ffmpeg-binaries": "^4.2.1-1",
+    "avconv": "^3.1.0",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.2.4",
+    "node.js": "0.0.1-security",
+    "package-lock.json": "^1.0.0",
+    "package.json": "^2.0.1",
+    "prism-media": "^1.2.2",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^2.1.5"
+  },
+  "optionalDependencies": {
+    "@discordjs/uws": "^10.149.0"
+  }
+}
