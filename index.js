@@ -5,58 +5,66 @@ const ytdl = require("ytdl-core");
 const dotenv = require("dotenv").config();
 require("./server.js");
 
+const rep = [
+  "Que porra de pergunta é esta, inseto?",
+  "Com toda a minha sabedoria e superioridade, a resposta é SIM.",
+  "Com toda a minha sabedoria e superioridade, a resposta é NÃO.",
+  "Talvez daqui uns milenios.",
+  "Jamais, inseto.",
+  "Incrivel como a sua pequenes é surpreendentemente nojenta. SUMA DA MINHA FRENTE COM ESSAS PERGUNTAS HORRIVEIS.",
+  "A resposta não deve ser dada para essas questões, inseto."
+];
 const rando_imgs = [
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006077171531816/5733aee659c8f.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006077821779988/571fdd69dc67c.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006080401145866/5737a4af0cc00.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006083630891008/51654becd881987a17231585ee75a4fa.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006087284129862/131123836-288-k669496.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006092929400903/04211655440286.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006095689252914/04211942282290.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006100424622080/08231339369619.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006103041998991/30162536215330.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006110331568128/a7c32ee2110a7be392f6617ba525354b.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006122427940864/o.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006129080107128/q.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006129080107128/q.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006131802210315/s.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006135052927066/g.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006150215204864/images.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006166434578432/tumblr_418186245489e43c876ec3487d53dc06_7320ea17_640.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006195371081728/6d3036c7a411e2f321881b7cb7d92612.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006195643711488/59ae71f366066.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006196377714698/5cbf264fb9d50.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006197032157305/95dfebb08958bd78c2852400d3ed37db.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006209107689532/6b5d35258868e85f4ad6f7f4874dea9a.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006211825598514/55f897f03e73b.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006213184553020/obn6lwrrswi41.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/723006326191685712/0d3f34b021aa08230580c6131c08536d854b0e8c_00.gif",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038631702003864/2a90c4f28b9bcf324ef60bc3833ff609.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038644641300500/4a75ccfcfbf54c25d9e495f2d5dabd7b95030342r1-964-1064v2_hq.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038655420661790/4c7aa04c52d4779b54c3dbfef716f7bf.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038657027342406/5ab136a47c976.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038666434904064/5bccfeb0115ee6e07a71911a3a307437.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038669597409320/12c82f6bc64475c57f394930cbc248e1.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038673808752660/59ecb9d11c7f6.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038694763233310/98dc4208fe23b184b0d16b09e8d74a82.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038698710335550/5723e6d4b4c04.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038703546368000/12143338160109.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038724765220874/download_1.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038731308204042/download_2.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038739000819712/28131342825076.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038739135037480/download.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038752544227328/d94d0f97aa5653d55dcea770c119215290893c26r1-1818-2048v2_00.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038773796634684/images_1.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038784387252234/images_2.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038784873660467/ec5b7a4b93aa38aa1386087c88622151.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038795384717372/images_4.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038795405688892/images_3.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038799738404955/5723e99775162.jpeg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038804767506442/images_6.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038804922695780/images.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038805413429349/images_5.jpg",
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038834937004073/memes-8.jpg"
 ];
 
 const PREFIX = "!c";
@@ -89,14 +97,25 @@ bot.on("message", async msg => {
   const url = args[1] ? args[1].replace(/<(.+)>/g, "$1") : "";
   const serverQueue = queue.get(msg.guild.id);
 
+  const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
+  const replies = rep[Math.floor(Math.random() * rep.length)];
+
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
   if (command === "bert") {
-    const bert = new Discord.MessageEmbed();
-    msg.channel.send(
-      (file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)])
-    );
+    const bert = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription(`Toma um pouco de alegria para sua vida miseravel, inseto,`)
+    .setImage(file)
+    .setFooter("Sua alma é minha...")
+    msg.channel.send(bert);
+  }
+  if (command === "perg") {
+    const perg = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription(replies)
+    msg.channel.send(perg);
   }
   if (command === "help") {
     const helpembed = new Discord.MessageEmbed()
@@ -106,23 +125,25 @@ bot.on("message", async msg => {
         `
           __***Comandos***__
 
-\`!play [titulo/url]\`|\`Colocar música na queue\`|
+\`!cplay [titulo/url]\`|\`Colocar música na queue\`|
 
-\`!search [titulo]\`|\`Para procurar a música\`|
+\`!csearch [titulo]\`|\`Para procurar a música\`|
 
-\`!skip\`|\`Para pular a música atual\`|
+\`!cskip\`|\`Para pular a música atual\`|
 
-\`!stop\`|\`Para parar a música atual\`|
+\`!cstop\`|\`Para parar a música atual\`|
 
-\`!resume\`|\`Para ligar novamente a música\`|
+\`!cresume\`|\`Para ligar novamente a música\`|
 
-\`!nowplaying\`|\`Para saber oque está tocando\`|
+\`!cnowplaying\`|\`Para saber oque está tocando\`|
 
-\`!queue\`|\`Para abrir a queue\`|
+\`!cqueue\`|\`Para abrir a queue\`|
 
-\`!bert\`|\`shitpost\`|
+\`!cbert\`|\`shitpost\`|
 
-\`!volume [num 1-100]\`|\`Para alterar o volume]\``
+\`!cperg\`|\`Respostas para suas duvidas (SIM/NÃO)\`|
+
+\`!cvolume [num 1-100]\`|\`Para alterar o volume]\``
       )
       .setFooter("Desenvolvido por Lipolly 2020");
     msg.channel.send(helpembed);
@@ -378,5 +399,5 @@ function play(guild, song) {
     }
   });
 }
-
+//process.env.
 bot.login(process.env.TOKEN);
