@@ -97,9 +97,7 @@ bot.on("message", async msg => {
   const url = args[1] ? args[1].replace(/<(.+)>/g, "$1") : "";
   const serverQueue = queue.get(msg.guild.id);
 
-  const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
   const replies = rep[Math.floor(Math.random() * rep.length)];
-
   const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
