@@ -100,17 +100,20 @@ bot.on("message", async msg => {
   const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
   const replies = rep[Math.floor(Math.random() * rep.length)];
 
+  const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
+
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
   if (command === "bert") {
     const bert = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setDescription(`Toma um pouco de alegria para sua vida miseravel, inseto,`)
+    .setDescription(`Toma um pouco de alegria para sua vida miseravel, inseto.`)
     .setImage(file)
     .setFooter("Sua alma é minha...")
     msg.channel.send(bert);
   }
+  
   if (command === "perg") {
     const perg = new Discord.MessageEmbed()
     .setColor("b50102")
