@@ -12,7 +12,10 @@ const rep = [
   "Talvez daqui uns milenios.",
   "Jamais, inseto.",
   "Incrivel como a sua pequenes é surpreendentemente nojenta. SUMA DA MINHA FRENTE COM ESSAS PERGUNTAS HORRIVEIS.",
-  "A resposta não deve ser dada para essas questões, inseto."
+  "A resposta não deve ser dada para essas questões, inseto.",
+  "Creio que é possivel.",
+  "Pergunte para outro lacaio, estou muito ocupado gerenciando as almas.",
+  "Tão certo quanto a existencia dos precursores do caos..."
 ];
 const rando_imgs = [
   "https://cdn.discordapp.com/attachments/723006025686581330/723006077171531816/5733aee659c8f.jpeg",
@@ -64,7 +67,25 @@ const rando_imgs = [
   "https://cdn.discordapp.com/attachments/723006025686581330/724038804767506442/images_6.jpg",
   "https://cdn.discordapp.com/attachments/723006025686581330/724038804922695780/images.jpg",
   "https://cdn.discordapp.com/attachments/723006025686581330/724038805413429349/images_5.jpg",
-  "https://cdn.discordapp.com/attachments/723006025686581330/724038834937004073/memes-8.jpg"
+  "https://cdn.discordapp.com/attachments/723006025686581330/724038834937004073/memes-8.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446543129608272/7751318763d61ecb77fcb8017c5b2ebc.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446551962943518/08024257574563.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446558220845126/cac9a84cff99ba5076be9ffcc8aa29f2.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446565758140537/cbf5cd7aae465f8507f8ee222a50a6d1.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446570602299432/d5ec43bba1cb9cf5f229f0063bb79e6a.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446576172597260/efaf0c6a12d82ddf1ed1fdfddedd0ec6.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446591229886534/images.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446591561236561/ETeaU8oXQAMpitr.png",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446597668405288/0b99a1643ead8007557f9fbc9bd51d57.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446605645971536/0cef098e00b9c7660a5a8133c89d10e2.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446616697831474/0fe246092f9521351a517d1e122eaf28.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446619495563264/5baa89c16362294239942cfb2289dec0.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446625921237062/5e777f4639f86.jpeg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446633730768936/8bf56088c13e3ff096e101acf4392e64.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446638688698388/21a3e9bbb4c67779b67ac8128a12b360.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446649778176040/837d0c6bf4fc2b727093dc2f2be9a9e4.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446655189090384/900ab6614c7adaeafd14678f42a249b8.jpg",
+  "https://cdn.discordapp.com/attachments/724446406974373939/724446656879132763/6211bcc2897b00a48c617b9c8543c7ab.jpg"
 ];
 
 const PREFIX = "!c";
@@ -108,7 +129,7 @@ bot.on("message", async msg => {
     .setColor("b50102")
     .setDescription(`Toma um pouco de alegria para sua vida miseravel, inseto.`)
     .setImage(file)
-    .setFooter("Sua alma é minha...")
+    .setFooter("Sua alma é minha e sua divida cresce...")
     msg.channel.send(bert);
   }
   
@@ -149,7 +170,7 @@ bot.on("message", async msg => {
       .setFooter("Desenvolvido por Lipolly 2020");
     msg.channel.send(helpembed);
   }
-  if (command === "play" || command === "p") {
+  if (command === "play") {
     const voiceChannel = msg.member.voice.channel;
     if (!voiceChannel)
       return msg.channel.send("Preciso estar num canal para tocar música, inseto!");
@@ -261,7 +282,7 @@ Você deve me dar um valor para selecionar um dos resultados, de 1-10.
     if (!msg.member.voice.channel)
       return msg.channel.send("Preciso estar num canal para tocar música, burro!");
     if (!serverQueue)
-      return msg.channel.send("Não é possível skipar aquilo que não existe.");
+      return msg.channel.send("Não é possível skipar aquilo que não existe, é tipo eu, porem eu claramente existo.");
     serverQueue.connection.dispatcher.end("Não irei mais ouvir esse lixo, skipado!");
     return msg.channel.send("Não irei mais ouvir esse lixo, skipado!");
   } else if (command === "stop") {
