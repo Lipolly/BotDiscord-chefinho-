@@ -157,10 +157,11 @@ if (command ==="prender") {
           .setColor('b50102')
           .setDescription(`O ${user} foi caçado pelos 7 caes do inferno, julgado e preso.`)
           .setImage(rand)
+          .setThumbnail(avatar)
           .setTimestamp()
           .addField("***Motivo: PORQUE EU DECIDI QUE SIM.***", "*Inseto imundo...*")
           .setFooter(`Eu sou a lei!`)
-          .setAuthor("Prender essa cara ai? hmmm, ok", avatar);
+          .setAuthor("Prender essa cara ai? hmmm, ok");
     await msg.channel.send(cpreso);
   }
 
