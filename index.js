@@ -88,10 +88,15 @@ const rando_imgs = [
   "https://cdn.discordapp.com/attachments/724446406974373939/724446655189090384/900ab6614c7adaeafd14678f42a249b8.jpg",
   "https://cdn.discordapp.com/attachments/724446406974373939/724446656879132763/6211bcc2897b00a48c617b9c8543c7ab.jpg"
 ];
+const listpreso = [
+  'https://cdn.discordapp.com/attachments/718541595892383815/725073039238365254/ce9c02b8b5a66dcfe5446d3b8a09306f.gif',
+  'https://cdn.discordapp.com/attachments/718541595892383815/725073105667621024/tumblr_mz3j4lAIPn1qe89guo1_500.gif',
+  'https://cdn.discordapp.com/attachments/718541595892383815/725073168846291044/OpulentSlushyKakapo-size_restricted.gif'
+];
 
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
-
+const TOKEN = "NzE2MTY5Mjc2MTU0OTcwMTMy.XvJJCA.P7Ln-huIurckCu96y_mrIUip6xE";
 const bot = new Client({
   disableMentions: "all"
 });
@@ -122,9 +127,7 @@ bot.on("message", async msg => {
   // eslint-disanble-line
   if (msg.author.bot) return;
   if (!msg.content.startsWith(PREFIX)) return;
-  if (message.guild.id in stats === false) {
-    stats[message.guild.id] = {};
-}
+
   const args = msg.content.split(" ");
   const searchString = args.slice(1).join(" ");
   const url = args[1] ? args[1].replace(/<(.+)>/g, "$1") : "";
@@ -135,6 +138,31 @@ bot.on("message", async msg => {
 
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
+
+if (command ==="prender") {
+  const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
+  const user = msg.mentions.users.first() || bot.users.cache.get(args[0]);
+  if (!user) {
+    const respse = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription("Preciso de um nome para prender, inseto!")
+  return msg.reply(respse);}
+
+  let avatar = msg.author.displayAvatarURL({format: 'png'});
+
+    const cpreso = new Discord.MessageEmbed()
+          .setTitle('Foto do emissário do mandato de prisão  -->')
+          .setColor('b50102')
+          .setDescription(`O ${user} foi caçado pelos 7 caes do inferno, julgado e preso.`)
+          .setImage(rand)
+          .setTimestamp()
+          .addField("***Motivo: PORQUE EU DECIDI QUE SIM.***", "*Inseto imundo...*")
+          .setThumbnail(avatar)
+          .setFooter(`Eu sou a lei!`)
+          .setAuthor(avatar);
+    await msg.channel.send(cpreso);
+  }
+
 
   if (command === "bert") {
     const bert = new Discord.MessageEmbed()
@@ -434,4 +462,4 @@ function play(guild, song) {
   });
 }
 //process.env.
-bot.login(process.env.TOKEN);
+bot.login(TOKEN);
