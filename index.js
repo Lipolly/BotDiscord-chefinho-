@@ -143,6 +143,7 @@ bot.on("message", async msg => {
 if (command ==="prender") {
   const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
   const user = msg.mentions.users.first() || bot.users.cache.get(args[0]);
+  const chefinho = ["https://cdn.discordapp.com/attachments/724446406974373939/725090986652467280/chefinho.png"];
   if (!user) {
     const respse = new Discord.MessageEmbed()
     .setColor("b50102")
@@ -161,7 +162,7 @@ if (command ==="prender") {
           .setTimestamp()
           .addField("***Motivo: PORQUE EU DECIDI QUE SIM.***", "*Inseto imundo...*")
           .setFooter(`Eu sou a lei!`)
-          .setAuthor("Prender essa cara ai? hmmm, ok");
+          .setAuthor(chefinho, "Prender essa cara ai? hmmm, ok");
     await msg.channel.send(cpreso);
   }
 
