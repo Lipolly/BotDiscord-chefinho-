@@ -7,6 +7,7 @@ require("./server.js");
 
 const rep = [
   "Que porra de pergunta é esta, inseto?",
+  "com toda certeza",
   "Com toda a minha sabedoria e superioridade, a resposta é SIM.",
   "Com toda a minha sabedoria e superioridade, a resposta é NÃO.",
   "Talvez daqui uns milenios.",
@@ -100,7 +101,16 @@ const queue = new Map();
 
 bot.on("warn", console.warn);
 bot.on("error", console.error);
-bot.on("ready", () => console.log(`${bot.user.tag} acordou com sucesso!`));
+bot.on("ready", () => {
+  i = 0;
+setInterval( () => bot.user.setActivity(`Seu sofrimento...`, {
+      type: "WATCHING"
+    }), 1000 * 60); 
+bot.user
+    .setStatus("dnd")
+    .catch(console.error);
+console.log(`${bot.user.tag} acordou!`)
+});
 bot.on("shardDisconnect", (event, id) =>
   console.log(
     `O ${id} desconectado (${event.code}) ${event}, tentando se levantar!`
@@ -112,7 +122,9 @@ bot.on("message", async msg => {
   // eslint-disanble-line
   if (msg.author.bot) return;
   if (!msg.content.startsWith(PREFIX)) return;
-
+  if (message.guild.id in stats === false) {
+    stats[message.guild.id] = {};
+}
   const args = msg.content.split(" ");
   const searchString = args.slice(1).join(" ");
   const url = args[1] ? args[1].replace(/<(.+)>/g, "$1") : "";
@@ -388,7 +400,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
     if (playlist) return;
     else
       return msg.channel.send(
-        `<591629527571234819>  **|** **\`${song.title}\`** foi adicionado à queue, inseto!`
+        `**|** **\`${song.title}\`** foi adicionado à queue, inseto!`
       );
   }
   return;
