@@ -159,7 +159,6 @@ if (command ==="prender") {
           .setImage(rand)
           .setTimestamp()
           .addField("***Motivo: PORQUE EU DECIDI QUE SIM.***", "*Inseto imundo...*")
-          .setThumbnail(avatar)
           .setFooter(`Eu sou a lei!`)
           .setAuthor("Prender essa cara ai? hmmm, ok", avatar);
     await msg.channel.send(cpreso);
