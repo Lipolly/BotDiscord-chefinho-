@@ -1,0 +1,25 @@
+if (command ==="prender") {
+  const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
+  const user = msg.mentions.users.first() || bot.users.cache.get(args[0]);
+  if (!user) {
+    const respse = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription("Preciso de um nome para prender, inseto!")
+  return msg.reply(respse);}
+
+  let avatar = msg.author.displayAvatarURL({format: 'png'});
+
+    const cpreso = new Discord.MessageEmbed()
+
+          .setTitle('Foto do emissário do mandato de prisão  -->')
+          .setColor('b50102')
+          .setDescription(`O ${user} foi caçado pelos 7 caes do inferno, julgado e preso.`)
+          .setImage(rand)
+          .setThumbnail(avatar)
+          .setTimestamp()
+          .addField("***Motivo: PORQUE EU DECIDI QUE SIM.***", "*Inseto imundo...*")
+          .setFooter(`Eu sou a lei!`)
+          .setAuthor("Prender essa cara ai? hmmm, ok");
+    await msg.channel.send(cpreso);
+  }
+
