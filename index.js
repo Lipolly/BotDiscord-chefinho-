@@ -96,7 +96,8 @@ const listpreso = [
 
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
-const TOKEN = "NzE2MTY5Mjc2MTU0OTcwMTMy.XvJJCA.P7Ln-huIurckCu96y_mrIUip6xE";
+
+
 const bot = new Client({
   disableMentions: "all"
 });
@@ -462,4 +463,4 @@ function play(guild, song) {
   });
 }
 //process.env.
-bot.login(TOKEN);
+bot.login(process.env.TOKEN);
