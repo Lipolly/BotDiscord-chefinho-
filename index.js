@@ -140,7 +140,7 @@ bot.on("message", async msg => {
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
-if (command ==="prender") {
+if (command ==="pris") {
   const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
   const user = msg.mentions.users.first() || bot.users.cache.get(args[0]);
   if (!user) {
@@ -175,7 +175,7 @@ if (command ==="prender") {
     msg.channel.send(bert);
   }
   
-  if (command === "perg") {
+  if (command === "duvida" || command === "d") {
     const perg = new Discord.MessageEmbed()
     .setColor("b50102")
     .setDescription(replies)
@@ -205,14 +205,14 @@ if (command ==="prender") {
 
 \`!cbert\`|\`shitpost\`|
 
-\`!cperg\`|\`Respostas para suas duvidas (SIM/NÃO)\`|
+\`!cduvida\`|\`Respostas para suas duvidas (SIM/NÃO)\`|
 
 \`!cvolume [num 1-100]\`|\`Para alterar o volume]\``
       )
       .setFooter("Desenvolvido por Lipolly 2020");
     msg.channel.send(helpembed);
   }
-  if (command === "play") {
+  if (command === "play" || command === "p") {
     const voiceChannel = msg.member.voice.channel;
     if (!voiceChannel)
       return msg.channel.send("Preciso estar num canal para tocar música, inseto!");
