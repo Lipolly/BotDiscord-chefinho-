@@ -149,7 +149,9 @@ if (command ==="prender") {
     .setDescription("Preciso de um nome para prender, inseto!")
   return msg.reply(respse);}
 
-  let avatar = msg.author.displayAvatarURL({format: 'png'});
+  let users = msg.mentions.users.first() || bot.users.cache.get(args[0]) || message.author;
+  
+  let avatar = users.avatarURL({ dynamic: true, format: "png", size: 1024 });
 
     const cpreso = new Discord.MessageEmbed()
 
