@@ -181,6 +181,7 @@ if (command ==="pris") {
     .setDescription(replies)
     msg.channel.send(perg);
   }
+  
   if (command === "help") {
     const helpembed = new Discord.MessageEmbed()
       .setColor("b50102")
