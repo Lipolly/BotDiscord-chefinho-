@@ -36,8 +36,10 @@
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.4",
     "node.js": "0.0.1-security",
+    "nodejs": "0.0.0",
     "package-lock.json": "^1.0.0",
     "package.json": "^2.0.1",
+    "pkg.json": "^2.0.7",
     "prism-media": "^1.2.2",
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^2.1.5"
