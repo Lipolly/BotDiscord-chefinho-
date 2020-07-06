@@ -138,6 +138,9 @@ const listpreso = [
   'https://cdn.discordapp.com/attachments/718541595892383815/725073168846291044/OpulentSlushyKakapo-size_restricted.gif'
 ];
 
+const chef = ["https://cdn.discordapp.com/attachments/712225657924616272/729560588870484068/chefinho.png"];
+const nels =["https://cdn.discordapp.com/attachments/712225657924616272/729560699956756490/nelsinho.png"];
+
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
 
@@ -281,6 +284,7 @@ if (command ==="pris") {
   if (command === "config4") {
     const config4 = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setThumbnail("nels")
     .setTitle("Ah queres chamar o Nelson? Aquele inutil? Ok... use está outra escritura e ele irá onde quer que seja.")
     .setDescription("https://discordapp.com/oauth2/authorize?client_id=712448276703608864&scope=bot&permissions=8")
     .setFooter("Cada ideia que esses insetos tem... chamar o Nelson? Que otarios MUAHAHAAH.")
@@ -290,6 +294,7 @@ if (command ==="pris") {
   if (command === "config5") {
     const config5 = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setThumbnail(chef)
     .setTitle("Hmmm desejas ME chamar? Bem vai lhe custar caro, use está outra escritura e talvez EU apareça.")
     .setDescription("https://discordapp.com/oauth2/authorize?client_id=712513258279403621&scope=bot&permissions=8")
     .setFooter("Sua alma ja é minha mesmo, não se preocupe inseto.")
