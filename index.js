@@ -138,8 +138,12 @@ const listpreso = [
   'https://cdn.discordapp.com/attachments/718541595892383815/725073168846291044/OpulentSlushyKakapo-size_restricted.gif'
 ];
 
-const chef = ["https://cdn.discordapp.com/attachments/712225657924616272/729560588870484068/chefinho.png"];
-const nels =["https://cdn.discordapp.com/attachments/712225657924616272/729560699956756490/nelsinho.png"];
+const chefi = ["https://cdn.discordapp.com/attachments/712225657924616272/729560588870484068/chefinho.png"
+];
+const conj = ["https://cdn.discordapp.com/attachments/712225657924616272/729563154467782756/vitoria-maxwell-mariana-magic-circle-animation-export.gif"
+];
+const nelsi = ["https://cdn.discordapp.com/attachments/712225657924616272/729560699956756490/nelsinho.png"
+];
 
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
@@ -183,6 +187,9 @@ bot.on("message", async msg => {
 
   const replies = rep[Math.floor(Math.random() * rep.length)];
   const file = rando_imgs[Math.floor(Math.random() * rando_imgs.length)];
+  const chef = chefi[Math.floor(Math.random() * chefi.length)];
+  const nels = nelsi[Math.floor(Math.random() * nelsi.length)];
+  const conjuration = conj[Math.floor(Math.random() * conj.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
@@ -276,6 +283,7 @@ if (command ==="pris") {
   if (command === "config3") {
     const config3 = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setThumbnail(conjuration)
     .setTitle("Quer convocar mais um seguidor? Bem, use essa escrita mitíca.")
     .setDescription("https://discord.gg/kYVGXmb")
     msg.channel.send(config3);
@@ -284,9 +292,9 @@ if (command ==="pris") {
   if (command === "config4") {
     const config4 = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setThumbnail("nels")
     .setTitle("Ah queres chamar o Nelson? Aquele inutil? Ok... use está outra escritura e ele irá onde quer que seja.")
     .setDescription("https://discordapp.com/oauth2/authorize?client_id=712448276703608864&scope=bot&permissions=8")
+    .setThumbnail(nels)
     .setFooter("Cada ideia que esses insetos tem... chamar o Nelson? Que otarios MUAHAHAAH.")
     msg.channel.send(config4);
   }
@@ -294,9 +302,9 @@ if (command ==="pris") {
   if (command === "config5") {
     const config5 = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setThumbnail(chef)
     .setTitle("Hmmm desejas ME chamar? Bem vai lhe custar caro, use está outra escritura e talvez EU apareça.")
     .setDescription("https://discordapp.com/oauth2/authorize?client_id=712513258279403621&scope=bot&permissions=8")
+    .setThumbnail(chef)
     .setFooter("Sua alma ja é minha mesmo, não se preocupe inseto.")
     msg.channel.send(config5);
   }
