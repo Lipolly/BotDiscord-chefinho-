@@ -225,7 +225,77 @@ if (command ==="pris") {
     .setDescription(replies)
     msg.channel.send(perg);
   }
+
+  if (command === "config") {
+    const config = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription(`
+    ***Relacionados a musica***
+
+    ***Nelson***
+    *!resume  :: Despausa a música*
+    *!pause     :: Pausa a música*
+    *!loop        :: Repete a música atual.*
+    *!play         :: Inicia uma música para tocar.*
+    *!queue        :: Abre a queue.*
+    *!skip         :: Pula a música atual.*
+    *!remove     :: Remove uma música da queue.*
+    *!stop     : Para a música que você esta ouvindo.*
+    
+    ***Chefinho***
+    *!cresume  :: Despausa a música*
+    *!cpause     :: Pausa a música*
+    *!cloop        :: Repete a música atual.*
+    *!cplay         :: Inicia uma música para tocar.*
+    *!cqueue        :: Abre a queue.*
+    *!cskip         :: Pula a música atual.*
+    *!cremove     :: Remove uma música da queue.*
+    *!cstop     : Para a música que você esta ouvindo.*`)
+    msg.channel.send(config);
+  }
+
+  if (command === "config2") {
+    const config2 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setDescription(`
+    ***Primatas***
+    *!monkey    :: Fotos de macacos.*
+    *!cbert    :: Shitposte.*
+    *!cduvida    :: Respostas (SIM/NÃO) para suas duvidas.*
+    
+    "A mas você quer saber o valor da sua alm.. Digo, seu nivel?"
+
+    *!rank    :: Mostra seu "nivel"*                      
+    *!levels   :: Mostra o rank dos membros no servidor*`)
+    msg.channel.send(config2);
+  }
   
+  if (command === "config3") {
+    const config3 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setTitle("Quer convocar mais um seguidor? Bem, use essa escrita mitíca.")
+    .setDescription("https://discord.gg/kYVGXmb")
+    msg.channel.send(config3);
+  }
+
+  if (command === "config4") {
+    const config4 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setTitle("Ah queres chamar o Nelson? Aquele inutil? Ok... use está outra escritura e ele irá onde quer que seja.")
+    .setDescription("https://discordapp.com/oauth2/authorize?client_id=712448276703608864&scope=bot&permissions=8")
+    .setFooter("Cada ideia que esses insetos tem... chamar o Nelson? Que otarios MUAHAHAAH.")
+    msg.channel.send(config4);
+  }
+
+  if (command === "config5") {
+    const config5 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setTitle("Hmmm desejas ME chamar? Bem vai lhe custar caro, use está outra escritura e talvez EU apareça.")
+    .setDescription("https://discordapp.com/oauth2/authorize?client_id=712513258279403621&scope=bot&permissions=8")
+    .setFooter("Sua alma ja é minha mesmo, não se preocupe inseto.")
+    msg.channel.send(config5);
+  }
+
   if (command === "help") {
     const helpembed = new Discord.MessageEmbed()
       .setColor("b50102")
