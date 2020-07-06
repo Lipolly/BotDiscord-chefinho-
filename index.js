@@ -245,9 +245,8 @@ if (command ==="pris") {
   if (command === "config") {
     const config = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setTitle("Afim de ouvir algum lix.. Musica humano? Podes usar estes comandos aqui pra isso.")
     .setDescription(`
-    ***Relacionados a musica***
-
     ***Nelson***
     *!resume  :: Despausa a música*
     *!pause     :: Pausa a música*
@@ -274,6 +273,7 @@ if (command ==="pris") {
   if (command === "config2") {
     const config2 = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setTitle("Temos esses diferenciados tambem.")
     .setDescription(`
     ***Primatas***
     *!monkey    :: Fotos de macacos.*
