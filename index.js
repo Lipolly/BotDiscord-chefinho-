@@ -245,7 +245,6 @@ if (command ==="pris") {
   if (command === "config") {
     const config = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setThumbnail(esqu)
     .setDescription(`
     ***Relacionados a musica***
 
@@ -268,13 +267,13 @@ if (command ==="pris") {
     *!cskip         :: Pula a música atual.*
     *!cremove     :: Remove uma música da queue.*
     *!cstop     : Para a música que você esta ouvindo.*`)
+    .setThumbnail(esqu)
     msg.channel.send(config);
   }
 
   if (command === "config2") {
     const config2 = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setThumbnail(elmo)
     .setDescription(`
     ***Primatas***
     *!monkey    :: Fotos de macacos.*
@@ -285,6 +284,7 @@ if (command ==="pris") {
 
     *!rank    :: Mostra seu "nivel"*                      
     *!levels   :: Mostra o rank dos membros no servidor*`)
+    .setThumbnail(elmo)
     msg.channel.send(config2);
   }
   
