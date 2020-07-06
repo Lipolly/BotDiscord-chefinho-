@@ -245,9 +245,9 @@ if (command ==="pris") {
   if (command === "config") {
     const config = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setTitle("Afim de ouvir algum lix.. Musica humano? Podes usar estes comandos aqui pra isso.")
+    .setTitle("Afim de ouvir algum lix.. Digo, musica humano? Podes usar estes comandos aqui pra isso.")
     .setDescription(`
-    ***Nelson***
+    ***Comandos do Nelson***
     *!resume  :: Despausa a música*
     *!pause     :: Pausa a música*
     *!loop        :: Repete a música atual.*
@@ -257,7 +257,7 @@ if (command ==="pris") {
     *!remove     :: Remove uma música da queue.*
     *!stop     : Para a música que você esta ouvindo.*
     
-    ***Chefinho***
+    ***Comandos do Chefinho***
     *!cresume  :: Despausa a música*
     *!cpause     :: Pausa a música*
     *!cloop        :: Repete a música atual.*
@@ -277,11 +277,14 @@ if (command ==="pris") {
     .setDescription(`
     ***Primatas***
     *!monkey    :: Fotos de macacos.*
+    ***Shitposting***
     *!cbert    :: Shitposte.*
+    ***Respostas divinas para suas duvidas***
     *!cduvida    :: Respostas (SIM/NÃO) para suas duvidas.*
     
     "A mas você quer saber o valor da sua alm.. Digo, seu nivel?"
 
+    ***Comandos de Level***
     *!rank    :: Mostra seu "nivel"*                      
     *!levels   :: Mostra o rank dos membros no servidor*`)
     .setThumbnail(elmo)
