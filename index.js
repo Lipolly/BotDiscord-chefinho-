@@ -144,6 +144,10 @@ const conj = ["https://cdn.discordapp.com/attachments/712225657924616272/7295631
 ];
 const nelsi = ["https://cdn.discordapp.com/attachments/712225657924616272/729560699956756490/nelsinho.png"
 ];
+const esq = ["https://cdn.discordapp.com/attachments/712225657924616272/729566699535335444/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"
+];
+const elm = ["https://cdn.discordapp.com/attachments/712225657924616272/729567723750686740/tenor.gif"
+];
 
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
@@ -190,6 +194,8 @@ bot.on("message", async msg => {
   const chef = chefi[Math.floor(Math.random() * chefi.length)];
   const nels = nelsi[Math.floor(Math.random() * nelsi.length)];
   const conjuration = conj[Math.floor(Math.random() * conj.length)];
+  const esqu = esq[Math.floor(Math.random() * esq.length)];
+  const elmo = elm[Math.floor(Math.random() * elm.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
@@ -239,6 +245,7 @@ if (command ==="pris") {
   if (command === "config") {
     const config = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setThumbnail(esqu)
     .setDescription(`
     ***Relacionados a musica***
 
@@ -267,6 +274,7 @@ if (command ==="pris") {
   if (command === "config2") {
     const config2 = new Discord.MessageEmbed()
     .setColor("b50102")
+    .setThumbnail(elmo)
     .setDescription(`
     ***Primatas***
     *!monkey    :: Fotos de macacos.*
