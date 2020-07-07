@@ -148,6 +148,8 @@ const esq = ["https://cdn.discordapp.com/attachments/712225657924616272/72956669
 ];
 const elm = ["https://cdn.discordapp.com/attachments/712225657924616272/729567723750686740/tenor.gif"
 ];
+const pare = ["https://cdn.discordapp.com/attachments/700532198381584405/730145892358684782/MetallicThriftyIcelandgull-small.gif"
+];
 
 const PREFIX = "!c";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
@@ -196,6 +198,7 @@ bot.on("message", async msg => {
   const conjuration = conj[Math.floor(Math.random() * conj.length)];
   const esqu = esq[Math.floor(Math.random() * esq.length)];
   const elmo = elm[Math.floor(Math.random() * elm.length)];
+  const parede = pare[Math.floor(Math.random() * pare.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
@@ -318,6 +321,52 @@ if (command ==="pris") {
     .setThumbnail(chef)
     .setFooter("Sua alma ja é minha mesmo, não se preocupe inseto.")
     msg.channel.send(config5);
+  }
+
+  if (command === "config6") {
+    const config6 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setTitle("A todos os inset... Digo, homens de cultura uqe possuem a chave do conhecimento, Trago o caminho:")
+    .setDescription(`
+    ***Busca*** 
+    *>>nhSearch <tag>  :: Busca nhentai pela tag*
+    *>>pixiv <tag>  :: Busca no pixiv pela tag*
+    *>>reddit  :: hentais do subreddit*
+    *>>r34 <tags>   :: Procura no Rule34 pela tag*
+    *>>e621 <tags>   :: Busca no e621 pela tag*
+    *>>danbooru <tag>   :: Procura no Danbooru pela tag*
+    *>>gelbooru <tags>   :: Busca no Gelbooru pela tag*
+    *>>derpi <tags>  :: Busca no Derpi pela tag*
+    
+    ***Videos ***
+    *>>hAtags <tags>  :: Procura no hanime.tv por hentais*
+    
+    ***Especifico***
+    *>>pussy :: Fotos buceta de hentai*
+    *>>boobs  :: Fotos de tetas de hentai*
+    *>>femdom  :: Fotos BDS de hentai*
+    *>>lewd  :: Fotos neko de hentai*
+    *>>yuri  :: Fotos lesb de hentai*
+    *>>waifu  :: Gera uma waifu*
+    *>>hentai  :: Gera um hentai*
+    *>>hentaibomb  :: Gera 5 fotos de hentai*
+    *>>yandere  :: Gera hentai yandere*
+    
+    *** 3D ***
+    *bbboobs :: Gera fotos de peitos*
+    *bbass  :: Gera fotos de bundas*
+    *bbgif  :: Random Gifs*
+    *bbpussy  :: Gera foto de xotas*
+    *bbcumsluts  :: Gera fotos de gozadas.*
+    *bbreal  :: Gera waifus 3D*
+    *bbrandom  :: Gera qualquer comando da lista 3D*
+    
+    ***3D Temáticos***
+    *bbvday  :: Gera fotos do dia dos namorados*
+    *bbeaster  :: Gera fotos com tema da Páscoa*
+    *bbxmas  :: Gera fotos de Natal*
+    *bbhalloween  :: Gera fotos do dia das bruxas*`)
+    .setThumbnail(parede)
   }
 
   if (command === "help") {
