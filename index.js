@@ -148,7 +148,7 @@ const esq = ["https://cdn.discordapp.com/attachments/712225657924616272/72956669
 ];
 const elm = ["https://cdn.discordapp.com/attachments/712225657924616272/729567723750686740/tenor.gif"
 ];
-const pare = ["https://cdn.discordapp.com/attachments/700532198381584405/730145892358684782/MetallicThriftyIcelandgull-small.gif"
+const pare = ["https://cdn.discordapp.com/attachments/719317270836412489/730149838477590568/MetallicThriftyIcelandgull-small.gif"
 ];
 
 const PREFIX = "!c";
