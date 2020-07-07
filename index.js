@@ -326,7 +326,7 @@ if (command ==="pris") {
   if (command === "config6") {
     const config6 = new Discord.MessageEmbed()
     .setColor("b50102")
-    .setTitle("A todos os inset... Digo, homens de cultura uqe possuem a chave do conhecimento, Trago o caminho:")
+    .setTitle("A todos os inset... Digo, homens de cultura que possuem a chave do conhecimento, Trago o caminho:")
     .setDescription(`
     ***Busca*** 
     *>>nhSearch <tag>  :: Busca nhentai pela tag*
@@ -367,6 +367,7 @@ if (command ==="pris") {
     *bbxmas  :: Gera fotos de Natal*
     *bbhalloween  :: Gera fotos do dia das bruxas*`)
     .setThumbnail(parede)
+    .setFooter("Estude sempre que puder.")
   msg.channel.send(config6);
   }
 
