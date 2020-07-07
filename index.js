@@ -367,6 +367,7 @@ if (command ==="pris") {
     *bbxmas  :: Gera fotos de Natal*
     *bbhalloween  :: Gera fotos do dia das bruxas*`)
     .setThumbnail(parede)
+  msg.channel.send(config6);
   }
 
   if (command === "help") {
