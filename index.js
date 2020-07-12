@@ -238,12 +238,12 @@ if (command ==="pris") {
     msg.channel.send(bert);
   }
   
-  if (command === "duvida" || command === "d") {
+  if (command === "duvida" || command === "d" || command ==="dúvida") {
     if (msg.content.includes("Lipolly", "Ricardo", "Ditador", "LiPolly", "lipolly", "ditador", "liPolly", "ricardo", "cargo", "Cargo")) {
       const perg2 = new Discord.MessageEmbed()
       .setColor("b50102")
       .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.channel.send(perg2)}
+    return  msg.reply(perg2);}
     const perg = new Discord.MessageEmbed()
     .setColor("b50102")
     .setDescription(replies)
