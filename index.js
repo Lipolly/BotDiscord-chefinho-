@@ -137,17 +137,7 @@ const listpreso = [
   'https://cdn.discordapp.com/attachments/718541595892383815/725073105667621024/tumblr_mz3j4lAIPn1qe89guo1_500.gif',
   'https://cdn.discordapp.com/attachments/718541595892383815/725073168846291044/OpulentSlushyKakapo-size_restricted.gif'
 ];
-const lipoli = ["Lipolly", 
-"Ricardo", 
-"Ditador", 
-"LiPolly", 
-"lipolly", 
-"ditador", 
-"liPolly", 
-"ricardo", 
-"cargo", 
-"Cargo"
-];
+
 const chefi = ["https://cdn.discordapp.com/attachments/712225657924616272/729560588870484068/chefinho.png"
 ];
 const conj = ["https://cdn.discordapp.com/attachments/712225657924616272/729563154467782756/vitoria-maxwell-mariana-magic-circle-animation-export.gif"
@@ -249,7 +239,52 @@ if (command ==="pris") {
   }
   
   if (command === "duvida" || command === "d" || command ==="dúvida") {
-    if (msg.content.includes(lipoli)) {
+    if (msg.content.includes("Lipolly")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("Ricardo")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("Ditador")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("LiPolly")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("lipolly")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("ditador")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("liPolly")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("ricardo")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("cargo")) {
+      const perg2 = new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setDescription("Pergunta pro Lipolly, inseto.")
+    return  msg.reply(perg2);}
+    if (msg.content.includes("Cargo")) {
       const perg2 = new Discord.MessageEmbed()
       .setColor("b50102")
       .setDescription("Pergunta pro Lipolly, inseto.")
