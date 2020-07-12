@@ -239,7 +239,7 @@ if (command ==="pris") {
   }
   
   if (command === "duvida" || command === "d") {
-    if (msg.content.includes("Lipolly", "Ricardo", "Ditador", "LiPolly" )) {
+    if (msg.content.includes("Lipolly", "Ricardo", "Ditador", "LiPolly", "lipolly", "ditador", "liPolly", "ricardo", "cargo", "Cargo")) {
       const perg2 = new Discord.MessageEmbed()
       .setColor("b50102")
       .setDescription("Pergunta pro Lipolly, inseto.")
