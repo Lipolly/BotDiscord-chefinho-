@@ -138,7 +138,7 @@ const listpreso = [
   'https://cdn.discordapp.com/attachments/718541595892383815/725073168846291044/OpulentSlushyKakapo-size_restricted.gif'
 ];
 
-const chefi = ["https://cdn.discordapp.com/attachments/702336455992672366/735918527776817282/chefe31.png"
+const chefi = ["https://cdn.discordapp.com/attachments/702336455992672366/735922661422661642/chefe31.png"
 ];
 const conj = ["https://cdn.discordapp.com/attachments/712225657924616272/729563154467782756/vitoria-maxwell-mariana-magic-circle-animation-export.gif"
 ];
