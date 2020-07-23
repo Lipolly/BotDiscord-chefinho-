@@ -13,10 +13,9 @@ const rep = [
   "Talvez daqui uns milenios.",
   "Jamais, inseto.",
   "Incrivel como a sua pequenes é surpreendentemente nojenta. SUMA DA MINHA FRENTE COM ESSAS PERGUNTAS HORRIVEIS.",
-  "A resposta não deve ser dada para essas questões, inseto.",
   "Creio que é possivel.",
   "Pergunte para outro lacaio, estou muito ocupado gerenciando as almas.",
-  "Tão certo quanto a existencia dos precursores do caos..."
+  "Tão certo quanto a existencia dos precursores do caos... malditas criaturas."
 ];
 const rando_imgs = [
   "https://cdn.discordapp.com/attachments/724446406974373939/729074490796933160/23131696_1695018637204579_5859999086972803689_n.jpg",
