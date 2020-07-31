@@ -186,7 +186,7 @@ bot.on("guildMemberRemove", async (member) => {
   let channel = await bot.channels.cache.get("738598181239259207");
   let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
   if (guild != member.guild) {
-    return console.log("Maldito inseto mizeravel, AMALDIÇOADO SEJA VOSSA EXISTENCIA E SEUS DECENDENTES.");
+    return console.log("Esses insetos...");
    } else {
       let embed = await new Discord.MessageEmbed()
       .setColor("b50102")
@@ -198,7 +198,7 @@ bot.on("guildMemberRemove", async (member) => {
       .setFooter("Nunca mais volte")
       .setTimestamp();
 
-    channel.send(embed);
+    msg.channel.send(embed);
   }
 });
 
@@ -227,8 +227,8 @@ bot.on("message", async msg => {
   if (command === "say") {
 
   const sayMessage = args.join(' ');
-  message.delete().catch(O_o => {});
-  message.channel.send(sayMessage);
+  msg.delete().catch(O_o => {});
+  msg.channel.send(sayMessage);
   }
 
   if (command === "pris" || command === "prisão") {
