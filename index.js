@@ -198,7 +198,7 @@ bot.on("guildMemberRemove", async (member) => {
       .setFooter("Nunca mais volte")
       .setTimestamp();
 
-    msg.channel.send(embed);
+    channel.send(embed);
   }
 });
 
