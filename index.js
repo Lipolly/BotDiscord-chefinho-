@@ -182,8 +182,8 @@ bot.on("Shard", id => console.log(`O ${id} esta levantando...`));
 
 bot.on("guildMemberRemove", async (member) => { 
 
-  let guild = await bot.guilds.cache.get("596802744803786757");
-  let channel = await bot.channels.cache.get("738598181239259207");
+  let guild = await bot.guilds.cache.get(596802744803786757);
+  let channel = await bot.channels.cache.get(738598181239259207);
   let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
   if (guild != member.guild) {
     return console.log("Esses insetos...");
