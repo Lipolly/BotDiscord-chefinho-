@@ -180,6 +180,28 @@ bot.on("shardDisconnect", (event, id) =>
 );
 bot.on("Shard", id => console.log(`O ${id} esta levantando...`));
 
+bot.on("guildMemberRemove", async (member) => { 
+
+  let guild = await bot.guilds.cache.get("596802744803786757");
+  let channel = await bot.channels.cache.get("738598181239259207");
+  let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
+  if (guild != member.guild) {
+    return console.log("Maldito inseto mizeravel, AMALDIÇOADO SEJA VOSSA EXISTENCIA E SEUS DECENDENTES.");
+   } else {
+      let embed = await new Discord.MessageEmbed()
+      .setColor("b50102")
+      .setAuthor(member.user.tag, member.user.displayAvatarURL())
+      .setTitle(`${emoji} Adeus! ${emoji}`)
+      //.setImage("https://imgur.com/3vYVlHb.gif")
+      .setDescription(`Maldito inseto mizerável, AMALDIÇOADO SEJA, **${member.user.username}**, vossa existencia e seus decendentes serão eternamente queimados no inferno.`)
+      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+      .setFooter("Nunca mais volte")
+      .setTimestamp();
+
+    channel.send(embed);
+  }
+});
+
 bot.on("message", async msg => {
   // eslint-disanble-line
   if (msg.author.bot) return;
@@ -202,7 +224,14 @@ bot.on("message", async msg => {
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
-if (command ==="pris") {
+  if (command === "say") {
+
+  const sayMessage = args.join(' ');
+  message.delete().catch(O_o => {});
+  message.channel.send(sayMessage);
+  }
+
+  if (command === "pris" || command === "prisão") {
   const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
   const user = msg.mentions.users.first() || bot.users.cache.get(args[0]);
   if (!user) {
@@ -226,7 +255,6 @@ if (command ==="pris") {
           .setFooter(`Eu sou a lei!`)
     await msg.channel.send(cpreso);
   }
-
 
   if (command === "bert") {
     const bert = new Discord.MessageEmbed()
