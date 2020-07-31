@@ -225,10 +225,10 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
-
-  const sayMessage = args.splice(0, 1);
+  
+  const sayMessage = args.join(" ");
   msg.delete().catch(O_o => {});
-  msg.channel.send(sayMessage);
+  msg.channel.send(`${sayMessage}`);
   }
 
   if (command === "pris" || command === "prisão") {
