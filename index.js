@@ -191,7 +191,7 @@ bot.on("guildMemberRemove", async (member) => {
       let embed = await new Discord.MessageEmbed()
       .setColor("b50102")
       .setAuthor(member.user.tag, member.user.displayAvatarURL())
-      .setTitle(`${emoji} Adeus! ${emoji}`)
+      .setTitle(`${emoji} Burnn! ${emoji}`)
       //.setImage("https://imgur.com/3vYVlHb.gif")
       .setDescription(`Maldito inseto mizerável, AMALDIÇOADO SEJA, **${member.user.username}**, vossa existencia e seus decendentes serão eternamente queimados no inferno.`)
       .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
