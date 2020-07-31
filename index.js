@@ -226,7 +226,7 @@ bot.on("message", async msg => {
 
   if (command === "say") {
 
-  const sayMessage = args.join(' ');
+  const sayMessage = args.join(0, 1);
   msg.delete().catch(O_o => {});
   msg.channel.send(sayMessage);
   }
