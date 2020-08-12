@@ -180,25 +180,45 @@ bot.on("shardDisconnect", (event, id) =>
 );
 bot.on("Shard", id => console.log(`O ${id} esta levantando...`));
 
-bot.on("guildMemberRemove", async (member) => { 
+//bot.on("guildMemberRemove", async (member) => { 
 
-  let guild = await bot.guilds.cache.get(596802744803786757);
-  let channel = await bot.channels.cache.get(738598181239259207);
-  let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
-  if (guild != member.guild) {
-      let embed89 = await new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setAuthor(member.user.tag, member.user.displayAvatarURL())
-      .setTitle(`${emoji} Burnn! ${emoji}`)
+  //let guild = await bot.guilds.cache.get(596802744803786757);
+  //let channel1 = await bot.channels.cache.get(738598181239259207);
+  //let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
+  //    let embed89 = await new Discord.MessageEmbed()
+  //    .setColor("b50102")
+  //    .setAuthor(member.user.tag, member.user.displayAvatarURL())
+  //    .setTitle(`${emoji} Burnn! ${emoji}`)
       //.setImage("https://imgur.com/3vYVlHb.gif")
-      .setDescription(`Maldito inseto mizerável, AMALDIÇOADO SEJA, **${member.user.username}**, vossa existencia e seus decendentes serão eternamente queimados no inferno.`)
-      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
-      .setFooter("Nunca mais volte")
-      .setTimestamp();
+  //    .setDescription(`Maldito inseto mizerável, AMALDIÇOADO SEJA, **${member.user.username}**, vossa existencia e seus decendentes serão eternamente queimados no inferno.`)
+  //    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+  //    .setFooter("Nunca mais volte")
+  //    .setTimestamp();
 
-    msg.channel.send(embed89);
-  }
-});
+  //  msg.channel1.send(embed89);
+  //});
+
+  bot.on("guildMemberRemove", async (member) => { 
+
+    let guild = await bot.guilds.cache.get(596802744803786757);
+    let channel = await bot.channels.cache.get(738598181239259207);
+    let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "nomedoemoji");
+    if (guild != member.guild) {
+      return console.log("Algum saco pela saiu do servidor. Mas não é nesse, então tá tudo bem :)");
+     } else {
+        let embed = await new Discord.MessageEmbed()
+        .setColor("#7c2ae8")
+        .setAuthor(member.user.tag, member.user.displayAvatarURL())
+        .setTitle('${emoji} Adeus! ${emoji}')
+        .setImage("https://imgur.com/3vYVlHb.gif%22")
+        .setDescription('**${member.user.username}**, saiu do servidor! 💔')
+        .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
+        .setFooter("Código de Hyouka Discord")
+        .setTimestamp();
+  
+      channel.send(embed);
+    }
+  });
 
 bot.on("message", async msg => {
   // eslint-disanble-line
