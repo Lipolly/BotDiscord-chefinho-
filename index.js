@@ -204,8 +204,7 @@ bot.on("Shard", id => console.log(`O ${id} esta levantando...`));
     let channel = await bot.channels.cache.get(738598181239259207);
     let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "nomedoemoji");
     if (guild != member.guild) {
-      return console.log("Algum saco pela saiu do servidor. Mas não é nesse, então tá tudo bem :)");
-     } else {
+      return console.log("Algum saco pela saiu do servidor. Mas não é nesse, então tá tudo bem :)")
         let embed = await new Discord.MessageEmbed()
         .setColor("#7c2ae8")
         .setAuthor(member.user.tag, member.user.displayAvatarURL())
