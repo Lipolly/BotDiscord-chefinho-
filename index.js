@@ -186,7 +186,7 @@ bot.on("guildMemberRemove", async (member) => {
   let channel = await bot.channels.cache.get(738598181239259207);
   let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
   if (guild != member.guild) {
-      let embed = await new Discord.MessageEmbed()
+      let embed89 = await new Discord.MessageEmbed()
       .setColor("b50102")
       .setAuthor(member.user.tag, member.user.displayAvatarURL())
       .setTitle(`${emoji} Burnn! ${emoji}`)
@@ -196,7 +196,7 @@ bot.on("guildMemberRemove", async (member) => {
       .setFooter("Nunca mais volte")
       .setTimestamp();
 
-    channel.send(embed);
+    msg.channel.send(embed89);
   }
 });
 
