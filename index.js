@@ -186,8 +186,6 @@ bot.on("guildMemberRemove", async (member) => {
   let channel = await bot.channels.cache.get(738598181239259207);
   let emoji = await member.guild.emojis.cache.find(emoji => emoji.name === "simb2");
   if (guild != member.guild) {
-    return console.log("Esses insetos...");
-   } else {
       let embed = await new Discord.MessageEmbed()
       .setColor("b50102")
       .setAuthor(member.user.tag, member.user.displayAvatarURL())
