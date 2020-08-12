@@ -225,7 +225,6 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
-  
   const sayMessage = args.join(" ");
   msg.delete().catch(O_o => {});
   msg.channel.send(`${sayMessage}`);
@@ -399,7 +398,6 @@ bot.on("message", async msg => {
     .setFooter("Sua alma ja é minha mesmo, não se preocupe inseto.")
     msg.channel.send(config5);
   }
-
   if (command === "config6") {
     const config6 = new Discord.MessageEmbed()
     .setColor("b50102")
