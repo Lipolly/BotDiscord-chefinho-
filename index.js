@@ -203,7 +203,6 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
-    msg.delete();
     const content = args.join(" ");
     
     if (!args[0]) {
@@ -226,6 +225,7 @@ bot.on("message", async msg => {
     
       for (const i in emojis) {
         await msg.react(emojis[i])
+        msg.delete();
       }
     }
     }
