@@ -145,7 +145,7 @@ const nelsi = ["https://cdn.discordapp.com/attachments/712225657924616272/729560
 ];
 const esq = ["https://cdn.discordapp.com/attachments/712225657924616272/729566699535335444/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f.gif"
 ];
-const elm = ["https://cdn.discordapp.com/attachments/712225657924616272/729567723750686740/tenor.gif"
+const elmo = ["https://cdn.discordapp.com/attachments/746470181420925069/746491002688110692/0a2b604d3230ea898f1ac05f6dca0845277224b2_hq.gif"
 ];
 const pare = ["https://cdn.discordapp.com/attachments/719317270836412489/730149838477590568/MetallicThriftyIcelandgull-small.gif"
 ];
@@ -196,13 +196,13 @@ bot.on("message", async msg => {
   const nels = nelsi[Math.floor(Math.random() * nelsi.length)];
   const conjuration = conj[Math.floor(Math.random() * conj.length)];
   const esqu = esq[Math.floor(Math.random() * esq.length)];
-  const elmo = elm[Math.floor(Math.random() * elm.length)];
+  const elm = elm[Math.floor(Math.random() * elm.length)];
   const parede = pare[Math.floor(Math.random() * pare.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
-  if (command === "say") {
+  if (command === "aviso") {
     msg.delete();
     const content = args.splice(2).join(" ");
     
@@ -372,6 +372,36 @@ bot.on("message", async msg => {
     msg.channel.send(config2);
   }
   
+  if (command === "config15") {
+    const config15 = new Discord.MessageEmbed()
+    .setColor("b50102")
+    .setTitle("O mercado de almas está aberto e aqui você pode ver como usa-lo.")
+    .setDescription(`
+    ***Como acessar o mercado***
+    *!store <page>    ::  Abre a loja.*
+    *!buy-item <quantidade> <item>    ::  Compra uma quantidade de itens.
+    *!item-info <nome do item>    :: Vê informações do item.*
+    *!sell-item <nome do comprador> <quantidade> <nome do item>    :: vende o item pra um membro.*
+    *!inventory <page>    :: Abre o inventorio.*
+    *!use-item <quantity> <item name>    :: Usa um item do seu inventorio.*
+
+    ***Formas de conseguiur almas***
+    *!work    :: Você trabalhara para mim e em troca lhe darei algumas almas.*
+    *!slut    :: Você irá vender seu corpo em troca de almas.*
+    *!crime    :: Você irá cometer um crime em nome do Deus jabiroca e será recompensado.*
+    *!rob     :: Você tentara roubar um outro membro.*
+
+    "Tambem temos os jogos do cassino do boss..."
+
+    ***Comando do cassino***
+    *!blackjack <valor aposta>    :: Jogará um blackjack (21)*                      
+    *!russian-roulette <valor aposta>    :: Jogo de 2 até 6 jogadores.*
+    *!slot-machine <valor aposta>    :: Jogo Caça-níquei.*  
+    *!cock-fight <valor aposta>   :: Você colocará seu galo na rinha para lutar até a morte. (É preciso um galo comprado para esse jogo)*`)
+    .setThumbnail(elm)
+    msg.channel.send(config15);
+  }
+
   if (command === "config3") {
     const config3 = new Discord.MessageEmbed()
     .setColor("b50102")
