@@ -216,7 +216,7 @@ bot.on("message", async msg => {
         new Discord.MessageEmbed()
         .setColor("b50102")
         //.addField("Autor:", message.author)
-        .addField(content)
+        //.addField(content)
         //.setFooter("ID do Autor: " + message.author.id)
         //.setTimestamp()
       );
