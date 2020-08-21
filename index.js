@@ -379,13 +379,13 @@ bot.on("message", async msg => {
     .setDescription(`
     ***Como acessar o mercado***
     *!store <page>    ::  Abre a loja.*
-    *!buy-item <quantidade> <item>    ::  Compra uma quantidade de itens.
+    *!buy-item <quantidade> <item>    ::  Compra uma quantidade de itens.*
     *!item-info <nome do item>    :: Vê informações do item.*
     *!sell-item <nome do comprador> <quantidade> <nome do item>    :: vende o item pra um membro.*
     *!inventory <page>    :: Abre o inventorio.*
     *!use-item <quantity> <item name>    :: Usa um item do seu inventorio.*
 
-    ***Formas de conseguiur almas***
+    ***Formas de conseguir almas***
     *!work    :: Você trabalhara para mim e em troca lhe darei algumas almas.*
     *!slut    :: Você irá vender seu corpo em troca de almas.*
     *!crime    :: Você irá cometer um crime em nome do Deus jabiroca e será recompensado.*
