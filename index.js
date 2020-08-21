@@ -211,7 +211,7 @@ bot.on("message", async msg => {
       return msg.channel.send(`${message.author.username}, forneça uma mensagem de no máximo 1000 caracteres.`);
     } else {
       var canal = msg.guild.channels.cache.find(ch => ch.id === "731669667164323861");
-      const msg = await canal.send(
+      const msg46 = await canal.send(
         new Discord.MessageEmbed()
         .setColor("b50102")
         //.addField("Autor:", message.author)
@@ -225,7 +225,6 @@ bot.on("message", async msg => {
     
       for (const i in emojis) {
         await msg.react(emojis[i])
-        msg.delete();
       }
     }
     }
