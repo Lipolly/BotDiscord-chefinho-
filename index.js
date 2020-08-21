@@ -211,7 +211,7 @@ bot.on("message", async msg => {
     } else if (content.length > 1000) {
       return msg.channel.send(`forneça uma mensagem de no máximo 1000 caracteres.`);
     } else {
-      var canal = msg.guild.channels.cache.find(ch => ch.id === "731669667164323861");
+      var canal = msg.guild.channels.cache.find(ch => ch.id === "746430938032111726");
       const msg46 = await canal.send(
         new Discord.MessageEmbed()
         .setColor("b50102")
