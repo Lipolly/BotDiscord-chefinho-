@@ -206,9 +206,9 @@ bot.on("message", async msg => {
     const content = args.join(" ");
     
     if (!args[0]) {
-      return msg.channel.send(`${message.author.username}, Se vai usar o poder de fala use para algo.`)
+      return msg.channel.send(`${msg.author.username}, Se vai usar o poder de fala use para algo.`)
     } else if (content.length > 1000) {
-      return msg.channel.send(`${message.author.username}, forneça uma mensagem de no máximo 1000 caracteres.`);
+      return msg.channel.send(`${msg.author.username}, forneça uma mensagem de no máximo 1000 caracteres.`);
     } else {
       var canal = msg.guild.channels.cache.find(ch => ch.id === "731669667164323861");
       const msg46 = await canal.send(
