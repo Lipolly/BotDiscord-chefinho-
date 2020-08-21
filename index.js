@@ -204,19 +204,19 @@ bot.on("message", async msg => {
 
   if (command === "say") {
     msg.delete();
-    const content = args.join(" ");
+    const content = args.splice(1).join(" ");
     
     if (!args[0]) {
-      return msg.channel.send(`${msg.author.username}, Se vai usar o poder de fala use para algo.`)
+      return msg.channel.send(` Se vai usar o poder de fala use para algo.`)
     } else if (content.length > 1000) {
-      return msg.channel.send(`${msg.author.username}, forneça uma mensagem de no máximo 1000 caracteres.`);
+      return msg.channel.send(`forneça uma mensagem de no máximo 1000 caracteres.`);
     } else {
       var canal = msg.guild.channels.cache.find(ch => ch.id === "731669667164323861");
       const msg46 = await canal.send(
         new Discord.MessageEmbed()
         .setColor("b50102")
         //.addField("Autor:", message.author)
-        .addField("Conteúdo", content)
+        .addField(content)
         //.setFooter("ID do Autor: " + message.author.id)
         //.setTimestamp()
       );
