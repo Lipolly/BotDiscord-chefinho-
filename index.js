@@ -203,7 +203,7 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
-    message.delete();
+    msg.delete();
     const content = args.join(" ");
     
     if (!args[0]) {
