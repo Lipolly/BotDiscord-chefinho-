@@ -196,7 +196,7 @@ bot.on("message", async msg => {
   const nels = nelsi[Math.floor(Math.random() * nelsi.length)];
   const conjuration = conj[Math.floor(Math.random() * conj.length)];
   const esqu = esq[Math.floor(Math.random() * esq.length)];
-  const elm = elm[Math.floor(Math.random() * elm.length)];
+  const elm = elmo[Math.floor(Math.random() * elmo.length)];
   const parede = pare[Math.floor(Math.random() * pare.length)];
 
   let command = msg.content.toLowerCase().split(" ")[0];
