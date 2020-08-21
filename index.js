@@ -203,6 +203,7 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
+    message.delete();
     const content = args.join(" ");
     
     if (!args[0]) {
@@ -219,7 +220,7 @@ bot.on("message", async msg => {
         //.setFooter("ID do Autor: " + message.author.id)
         //.setTimestamp()
       );
-      await msg.channel.send(`${message.author} a mensagem foi enviada, inseto!`);
+      await msg.channel.send(`${msg.author} a mensagem foi enviada, inseto!`);
     
       const emojis = ["🔥"];
     
