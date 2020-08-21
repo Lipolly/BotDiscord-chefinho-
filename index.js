@@ -203,10 +203,20 @@ bot.on("message", async msg => {
   command = command.slice(PREFIX.length);
 
   if (command === "say") {
-  const sayMessage = args.join(" ");
-  msg.delete().catch(O_o => {});
-  msg.channel.send(`${sayMessage}`);
-  }
+  //if (!args[0]) {
+ // return message.channel.send(`${message.author.username}, escreva a sugestão após o comando`)
+ // return message.channel.send(`${message.author.username}, forneça uma sugestão de no máximo 1000 caracteres.`);
+  var canal = msg.guild.channels.cache.find(ch => ch.id === "731669667164323861");
+  const msg3 = await canal.send(
+    new Discord.MessageEmbed()
+    .setColor("b50102")
+    //.addField("Autor:", message.author)
+    .addField("Conteúdo", content)
+    //.setFooter("ID do Autor: " + message.author.id)
+    //.setTimestamp()
+  );
+  await msg.channel.send(`${message.author} a mensagem foi enviada com sucesso!`);
+}
 
   if (command === "pris" || command === "prisão") {
   const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
