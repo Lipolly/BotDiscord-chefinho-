@@ -204,7 +204,7 @@ bot.on("message", async msg => {
 
   if (command === "say") {
     msg.delete();
-    const content = args.splice(0).join(" ");
+    const content = args.splice(2).join(" ");
     
     if (!args[0]) {
       return msg.channel.send(` Se vai usar o poder de fala use para algo.`)
