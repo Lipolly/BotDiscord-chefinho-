@@ -215,10 +215,12 @@ bot.on("message", async msg => {
       const msg46 = await canal.send(
         new Discord.MessageEmbed()
         .setColor("b50102")
+        .setTitle("Insetos, venho por meio desta informar...")
+        .setDescription(content)
         //.addField("Autor:", message.author)
         //.addField(content)
         //.setFooter("ID do Autor: " + message.author.id)
-        //.setTimestamp()
+        .setTimestamp()
       );
       await msg.channel.send(`a mensagem foi enviada, inseto!`);
     
