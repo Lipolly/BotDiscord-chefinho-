@@ -397,7 +397,12 @@ bot.on("message", async msg => {
     *!blackjack <valor aposta>    :: Jogará um blackjack (21)*                      
     *!russian-roulette <valor aposta>    :: Jogo de 2 até 6 jogadores.*
     *!slot-machine <valor aposta>    :: Jogo Caça-níquei.*  
-    *!cock-fight <valor aposta>   :: Você colocará seu galo na rinha para lutar até a morte. (É preciso um galo comprado para esse jogo)*`)
+    *!cock-fight <valor aposta>   :: Você colocará seu galo na rinha para lutar até a morte. (É preciso um galo comprado para esse jogo)*
+    
+    ***Como interagir com o seu dinheiro***
+    *!money    :: Abre sua carteira e mostra tambem o quanto você tem no banco.*
+    *!deposit <valor>    :: Você deposita uma quantidade de cash no banco.*
+    *!withdraw <valor>    :: Você faz um saque no dinheiro que você tem no banco.*`)
     .setThumbnail(elm)
     msg.channel.send(config15);
   }
