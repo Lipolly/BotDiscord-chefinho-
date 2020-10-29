@@ -35,6 +35,7 @@
     "express": "^4.17.1",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.4",
+    "miniget": "^2.0.2",
     "node.js": "0.0.1-security",
     "nodejs": "0.0.0",
     "package-lock.json": "^1.0.0",
