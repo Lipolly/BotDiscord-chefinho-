@@ -267,56 +267,6 @@ bot.on("message", async msg => {
   }
 
   if (command === "duvida" || command === "d" || command ==="dúvida") {
-    if (msg.content.includes("Lipolly")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("Ricardo")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("Ditador")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("LiPolly")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("lipolly")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("ditador")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("liPolly")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("ricardo")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("cargo")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
-    if (msg.content.includes("Cargo")) {
-      const perg2 = new Discord.MessageEmbed()
-      .setColor("b50102")
-      .setDescription("Pergunta pro Lipolly, inseto.")
-    return  msg.reply(perg2);}
     const perg = new Discord.MessageEmbed()
     .setColor("b50102")
     .setDescription(replies)
