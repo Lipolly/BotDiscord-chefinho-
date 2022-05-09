@@ -150,7 +150,7 @@ const elmo = ["https://cdn.discordapp.com/attachments/746470181420925069/7464910
 const pare = ["https://cdn.discordapp.com/attachments/719317270836412489/730149838477590568/MetallicThriftyIcelandgull-small.gif"
 ];
 
-const PREFIX = "!c";
+const PREFIX = "!";
 const GOOGLE_API_KEY = "AIzaSyAYQDHwZsdnT-SqOp8T1WdUA74SsWHja0I";
 
 
@@ -202,6 +202,35 @@ bot.on("message", async msg => {
   let command = msg.content.toLowerCase().split(" ")[0];
   command = command.slice(PREFIX.length);
 
+  if(command === "d20"){
+    //valor20 = math.floor(math.random() * 20 + 1)
+    const dado20 = new Discord.MessageEmbed()
+      .setTitle(`Resultado do DADO:`)
+      .setColor("#4d8cc2")
+      .setDescription(`valor20`)
+      .setFooter("Valor de um dado de 20 lados");
+      msg.channel.send(dado20);
+  }
+
+  if (command === "d") {
+    msg.delete();
+    const content = args.splice(1).join(" ");
+    
+    if (!args[0]) {
+      return msg.channel.send(` Se vai usar o poder de fala use para algo.`)
+    } else if (content.length > 1000) {
+      return msg.channel.send(`forneça uma mensagem de no máximo 1000 caracteres.`);
+    } else {
+      //valorDado = math.floor(math.random() * [int,content])
+      const dado20 = new Discord.MessageEmbed()
+      .setColor("#4d8cc2")
+      .setDescription(`valorDado`)
+      .setFooter("Valor de um dado de 20 lados")
+      .setTimestamp();
+      msg.channel.send(dado20);
+    }
+  }
+
   if (command === "aviso") {
     msg.delete();
     const content = args.splice(2).join(" ");
@@ -230,7 +259,7 @@ bot.on("message", async msg => {
         await msg.react(emojis[i])
       }
     }
-    }
+  }
 
   if (command === "pris" || command === "prisão") {
   const rand = listpreso[Math.floor(Math.random() * listpreso.length)];
