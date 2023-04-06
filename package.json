@@ -1,5 +1,5 @@
 {
-  "name": "music-bot-example",
+  "name": "chefinho-bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -15,14 +15,9 @@
     "DiscordJS",
     "NodeJS",
     "Discord",
-    "Zealcord"
   ],
   "author": "Lipolly",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zealcordNation/music-bot-example/issues"
-  },
-  "homepage": "https://github.com/zealcordNation/music-bot-example#readme",
   "engines": {
     "node": "12.x"
   },
